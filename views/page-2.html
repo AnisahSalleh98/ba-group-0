@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/master.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>BA Report | 2 </title>
+    <!-- InstanceEndEditable -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+
+    <link rel="stylesheet" href="../assests/script/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../assests/fonts/fontawesome.min.css">
+    <link rel="stylesheet" href="../assests/fonts/fonts.css">
+    <link rel="stylesheet" href="../assests/style/style.css">
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<body>
+
+    <!--Header-->
+     <header class="mb-0">
+                <div class="containerw mb-0">
+                    <div class="header-container mt-4 mb-0">
+                        <hr class="line-bl mb-3">
+                        <div class="row" >
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-6"><img src="../assests/images/icons/logo2.png" class="logo" alt=""></div>
+                                    <div class="col-6"><img src="../assests/images/icons/logo.png" class="logo" alt=""></div>
+                                </div>
+                            </div>
+        
+                            <div class="col-8">
+								<div class="row">
+									<div class="col-12">
+										<div class="row mt-2">
+											<div class="col-6 text-right" align="right" >ORGANISATION:</div>
+											<div class="col-6 text-right" align="right" >WWWWWWWWWWW WWWWWWWWWWW WWWWW WWWWWW & WWW WWW</div>
+										</div>
+									</div>
+
+									<div class="col-12">
+										<div class="row mt-2">
+											<div class="col-6 text-right" align="right" >TEST DATE:</div>
+											<div class="col-6 text-right" align="right" >12 NOVEMBER 2021</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+                        </div>
+                        <hr class="line-bl mt-3">
+                    </div>
+                </div>
+            </header>
+    <!--Header End-->
+
+    <!--Content Start-->
+<!-- InstanceBeginEditable name="contentRegion" -->
+	
+	<div class="containerw">
+        <h1 class="heading-1 text-uppercase mb-0"><strong>group</strong> profile overview</h1>
+        <div class="row mb-0 ">
+            <div class="col-1 pr-0"><hr class="line-bl mb-0"></div>
+            <div class="col-1 pl-0"><hr class="line-be mb-0"></div>
+        </div>
+    </div>
+
+    <div class="dimension-bg mt-4">
+        <div class="containerw mb-5">
+            <p class="para">Figure 1 below shows the distribution for each factor. Within the graph, the factors are ranked from most to
+                fewest low - scoring team members.</p>
+            <div class="d-bg">
+                <div class="highcharts-figure mx-auto" >
+                    <div id="container-stack" style="height:320px; width: 100%;"></div>
+                </div>
+            </div>
+            <p class="para">Figure 2 below shows the average scores on each behavioural competency; the competencies are ranked from
+                highest average score to lowest.
+                team members.</p>
+                <div class="d-bg">
+                    <figure class="highcharts-figure-stack" style="background-color: transparent;">
+                        <div id="chart-bar"  style="background-color: transparent; height:320px; width:fit-content;" class="mx-auto"></div>
+                    </figure>
+                </div>
+        </div>
+    </div>
+	
+<!-- InstanceEndEditable -->
+    <!--Content End-->
+
+    <!--Footer-->
+    <footer>
+        <div class="containerw">
+            <div class="footer" >
+                <div class="containerw">
+                    <div class="row">
+                        <div class="col-7 footer-logo-style">
+                            <span class="footer-text t-footer-copyrights">&copy;2017-2020 Global Psytech Sdn. Bhd. All Rights Reserved.</span>
+                        </div>
+                        <div class="col-5 footer-logo-style text-right" style="text-align: right;"><!-- InstanceBeginEditable name="footerPage" --><span class="footer-text"> 2 </span><!-- InstanceEndEditable --></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!--Footer end-->
+
+</body>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<!--Script-->
+    <!-- InstanceBeginEditable name="script" -->
+<script>
+  Highcharts.chart('container-stack', {
+    chart: {
+        type: 'bar',
+        backgroundColor: 'rgba(0,0,0,0)'
+    },
+    title: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Creativity','Innovation','Productivity','Problem Solving & <br> Resourcefulness',
+                    'Emotional <br> Intelligence','Resilience','Adaptation','Agility'],        
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text:'Total Individuals: 25'
+        },
+        gridLineWidth:0,
+        gridLineColor: ' gray',
+        labels:{enabled:false}
+    },
+    legend: {
+        reversed: true
+    },
+    plotOptions: {
+        series: {
+            stacking: 'normal'
+        },
+        bar:{
+            dataLabels: {
+            enabled: true
+            },
+        }
+    },
+    credits: {
+      enabled: false
+    },
+    exporting:{
+        enabled:false
+    },
+    series: [{
+        name: 'High',
+        data: [4, 5, 1, 2, 1, 4, 5, 1],
+        color:'#65a7db',
+    }, {
+        name: 'Medium',
+        data: [7, 5, 7, 6, 3,7, 5, 7],
+        color:'#dfd1a4',
+    }, {
+        name: 'Low',
+        data: [ 14, 15, 17, 17, 21, 14, 15, 17],
+        color:'#244667',
+    }]
+});
+
+
+Highcharts.chart('chart-bar', {
+    chart: {
+        type: 'bar',
+        backgroundColor: "rgba(0,0,0,0)",
+    },
+    title: {
+        text: null
+    },
+    xAxis: {
+        categories: ['Creativity','Innovation','Productivity','Problem Solving<br> & Resourcefulness','Emotional <br> Intelligence','Resillience',
+                    'Adaptation','Agility'],
+        title: {
+        text: null
+        },
+        style:{
+            fontSize:'8pt'
+        }
+    },
+    yAxis: {
+        tickInterval: 20,
+        min: 0,
+        max: 100,
+        title: {
+        text: null
+        },
+        labels: {
+        overflow: 'justify'
+        },
+        
+    },
+    tooltip: {
+        valueSuffix: ' score'
+    },
+    plotOptions: {
+        bar: {
+        dataLabels: {
+            enabled: true
+        }
+        },
+    },
+    legend: {
+        enabled: false
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name:'',
+        colorByPoint: true,
+        data: 
+        [
+        {y: 96,
+        color:'#244667'},
+        {y: 88,
+        color:'#1E88E5'},
+        {y: 76,
+        color:'#65a7db'},
+        {y: 65,
+        color:'#AED581'},
+        {y: 63,
+        color:'#7CB342'},
+
+        {y: 62,
+        color:'#00695C'},
+        {y: 59,
+        color:'#FFC107'},
+        {y: 45,
+        color:'#FF6F00'},
+        ],
+    }],
+    exporting:{
+        enabled:false
+    }
+    });
+</script>	
+	<!-- InstanceEndEditable -->
+<!--Script-->
+<!-- InstanceEnd --></html>
